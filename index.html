@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>緊急連絡先</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f6fad">
+    <link rel="icon" href="icon-192.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header class="header">
+        <h1>緊急連絡先</h1>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-button active" data-tab="contacts">連絡先</button>
+        <button class="tab-button" data-tab="settings">管理</button>
+        <button class="tab-button" data-tab="version">バージョン</button>
+    </nav>
+
+    <main>
+
+        <section id="contacts" class="tab-content active">
+            <div id="contactList"></div>
+        </section>
+
+        <section id="settings" class="tab-content">
+            <div class="settings-box">
+                <h2>保育園切替</h2>
+
+                <label class="radio-line">
+                    <input type="radio" name="nursery" value="m">
+                    こどもの森保育園
+                </label>
+
+                <label class="radio-line">
+                    <input type="radio" name="nursery" value="y">
+                    こどもの森You保育園
+                </label>
+            </div>
+        </section>
+
+        <section id="version" class="tab-content">
+            <div class="version-box">
+                <h2>バージョン情報</h2>
+                <p>Version 1.0.0</p>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<div id="imageViewer" class="image-viewer hidden">
+    <button id="backButton" class="back-button">戻る</button>
+
+    <div class="image-wrapper">
+        <img id="contactImage" src="" alt="">
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js');
+    });
+}
+</script>
+
+</body>
+</html>

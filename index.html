@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>緊急連絡先</title>
+
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4f6fad">
     <link rel="icon" href="icon-192.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,6 +34,7 @@
 
         <section id="settings" class="tab-content">
             <div class="settings-box">
+
                 <h2>保育園切替</h2>
 
                 <label class="radio-line">
@@ -42,6 +46,27 @@
                     <input type="radio" name="nursery" value="y">
                     こどもの森You保育園
                 </label>
+
+                <hr>
+
+                <h2>画像取込</h2>
+
+                <p class="note">
+                    選択中の保育園用として、JPGフォルダーを取り込みます。
+                </p>
+
+                <button id="importButton" class="import-button">
+                    画像取込
+                </button>
+
+                <input type="file"
+                       id="folderInput"
+                       webkitdirectory
+                       directory
+                       multiple
+                       accept=".jpg"
+                       hidden>
+
             </div>
         </section>
 

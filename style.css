@@ -93,29 +93,12 @@ main {
     line-height: 1.2;
 }
 
-.kamoshika {
-    background: #fde2e4;
-}
-
-.nousagi {
-    background: #e2f0cb;
-}
-
-.risu {
-    background: #dfe7fd;
-}
-
-.koguma {
-    background: #fff1c1;
-}
-
-.donguri {
-    background: #d9f0ff;
-}
-
-.momiji {
-    background: #f8d9ff;
-}
+.kamoshika { background: #fde2e4; }
+.nousagi { background: #e2f0cb; }
+.risu { background: #dfe7fd; }
+.koguma { background: #fff1c1; }
+.donguri { background: #d9f0ff; }
+.momiji { background: #f8d9ff; }
 
 .settings-box,
 .version-box {
@@ -124,9 +107,32 @@ main {
     border-radius: 10px;
 }
 
+.settings-box h2,
+.version-box h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
 .radio-line {
     display: block;
     margin-top: 12px;
+    font-size: 16px;
+}
+
+.note {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.import-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background: #e8eefb;
 }
 
 .image-viewer {

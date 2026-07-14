@@ -143,7 +143,15 @@ folderInput.addEventListener('change', async event => {
     for (const file of files) {
         const key = makeImageKey(file.name);
         currentKeys.push(key);
-        await putImage(key, file);
+
+        // Androidのフォルダー選択で同名画像の古い内容が残る場合があるため、
+        // 既存データを削除し、画像をバイト列として読み直してから保存する。
+        await deleteImage(key);
+        const imageBytes = await file.arrayBuffer();
+        const freshBlob = new Blob([imageBytes], {
+            type: file.type || 'image/jpeg'
+        });
+        await putImage(key, freshBlob);
         imported++;
     }
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'emergency-contact-v2';
+const CACHE_NAME = 'emergency-contact-v3';
 
 const APP_FILES = [
     './',
